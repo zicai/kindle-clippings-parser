@@ -1,0 +1,31 @@
+{
+  "name": "kindle-clippings-parser",
+  "version": "0.0.1",
+  "description": "parse kindle clippings to json",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zicai/kindle-clippings-parser.git"
+  },
+  "keywords": [
+    "kindle",
+    "clippings"
+  ],
+  "author": "zicai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zicai/kindle-clippings-parser/issues"
+  },
+  "homepage": "https://github.com/zicai/kindle-clippings-parser#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  },
+  "dependencies": {
+    "split2": "^2.0.1",
+    "stream-combiner": "^0.2.2"
+  }
+}
