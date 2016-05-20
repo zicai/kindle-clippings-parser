@@ -1,6 +1,6 @@
 {
   "name": "@zicai/kindle-clippings-parser",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "parse kindle clippings to json",
   "main": "index.js",
   "scripts": {
