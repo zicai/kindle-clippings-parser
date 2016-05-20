@@ -23,9 +23,27 @@ describe('测试 getMetaData()', function () {
     });
 });
 
-// todo
 describe('测试 kindleParser()', function () {
-    it('输入 My Clippings.txt', function () {
+    it('输入 My Clippings.txt', function (done) {
+        var result = [];
+        fs.createReadStream(__dirname + '/My Clippings.txt')
 
+            .pipe(kindleParser())
+            .on('data', function (data) {
+                result.push(data);
+            }).on('end', function () {
+                expect(result).to.be.a('array');
+                expect(result).have.lengthOf(4);
+                var item = {
+                    bookname: '送你一颗子弹 (刘瑜)',
+                    snippet: '你就知道一个非常简单的事情，因为有了“社会”，也就是有了两个以上的人，变得如何复杂起来。',
+                    datetime: '2016年4月4日星期一 上午8:51:10',
+                    location: '#380-381',
+                    type: '标注',
+                    page: '31'
+                };
+                expect(result).to.include(item);
+                done();
+            });
     })
 });
